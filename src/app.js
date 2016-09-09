@@ -20,12 +20,12 @@ function repoShow(name,link,info){
 $.get('https://api.github.com/users/srestaswrnm/repos',function(data){
   $.each(data,function(i,j){
     if(j.fork == true){
-      forkData =  "<div class='label label-success pull-right'>Forked</div>";
+      forkData =  "<div class='label label-success pull-right'><span class=\"fa fa-code-fork\"></span> Forked</div>";
     }else{
       forkData = " ";
 
     }
-    htmlData = "<a href='#' onclick=\"repoShow('"+j.full_name+"','"+j.html_url+"','"+j.description+"')\">"+j.full_name+"</a><br>"+forkData+"<p>"+j.description+"</p>";
+    htmlData = "<span class=\"fa fa-github \"></span> <a href='#' onclick=\"repoShow('"+j.full_name+"','"+j.html_url+"','"+j.description+"')\">"+j.full_name+"</a><br>"+forkData+"<p>"+j.description+"</p>";
 
     $('#github_repo').append(htmlData);
 
