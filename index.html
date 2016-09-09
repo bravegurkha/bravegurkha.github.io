@@ -1,6 +1,8 @@
-<!--Wrriten By Swornim Shrestha
+<!--
+Wrriten By Swornim Shrestha
 September 8, 2016 Thursday 2:44PM Nepal
 Written For My Github Page
+Email:srestaswrnm@gmail.com
 -->
 <head>
   <meta charset="UTF-8">
@@ -9,8 +11,25 @@ Written For My Github Page
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="src/app.js"></script>
 </head>
 <body>
+  <div class="modal fade in" id="repo_modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close" data-dismiss="modal">&times;</span>
+          <div id="repo_modal_header">
+          </div>
+        </div>
+        <div class="modal-body" id="repo_modal_body">
+        </div>
+        <div class="modal-footer" id="repo_modal_footer">
+
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="container" style="min-height:900px;">
     <div class="page-header">
       <h1>Swornim Shrestha</h1>
@@ -40,36 +59,16 @@ Written For My Github Page
     </div>
     <div class="col-sm-9">
       <div class="panel panel-info">
-          <div class="panel-heading">
-            <strong>Github Repositories</strong>
-          </div>
-          <div class="panel-body" id="github_repo">
+        <div class="panel-heading">
+          <strong>Github Repositories</strong>
+        </div>
+        <div class="panel-body" id="github_repo">
 
-          </div>
+        </div>
       </div>
     </div>
   </div>
 
-  </body>
+</body>
 
-  </html>
-
-
-  <script>
-  $.get('https://api.github.com/users/srestaswrnm/repos',function(data){
-    $.each(data,function(i,j){
-      if(j.fork == true){
-        forkData =  "<div class='label label-success pull-right'>Forked</div>";
-      }else{
-        forkData = " ";
-
-    }
-    htmlData = "<span class=\"ion-social-github\"></span> <a href='"+j.html_url+"'>"+j.full_name+"</a><br>"+forkData+"<p>"+j.description+"</p>";
-
-      $('#github_repo').append(htmlData);
-      console.log(j);
-
-    });
-
-  });
-</script>
+</html>
