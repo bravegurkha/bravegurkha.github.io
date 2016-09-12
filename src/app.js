@@ -32,3 +32,7 @@ $.get('https://api.github.com/users/bravegurkhas/repos',function(data){
   });
 
 });
+
+function showRepos(){
+  $('#repo_panel').fadeToggle(300);
+}
