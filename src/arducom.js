@@ -1,14 +1,12 @@
-$(document).ready(function(){
-  $('#python_arducom').hide();
-});
+
 
 function getCpp(){
     $('#cpp_arducom').show();
-    $('#python_arducom').hide();
+    $('#php_arducom').hide();
 }
 
-function getPython(){
+function getPHP(){
   $('#cpp_arducom').hide();
-  $('#python_arducom').show();
+  $('#php_arducom').show();
 
 }
