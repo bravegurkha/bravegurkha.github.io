@@ -52,7 +52,9 @@ Email:srestaswrnm@gmail.com
             At First Download the files and copy the C++ library to your working directory.Here Arducom is the name of class and Ser is name of Object. COM4 is the name of Serial Port. Incase of linux We Use dev/ttyACM0 or something similar. First see in which serial port arduino is communicating with your computer.
             </br></br>
             <p style="color:#999">Code:</p>
-            #include"src/Arducom.h" Arducom Ser("/dev/ttyACM0");
+            #include"src/Arducom.h"</br>
+            using namspace ac;<br>
+            Arducom Ser("/dev/ttyACM0");<br>
             <div>
             </div>
           </div>
@@ -66,7 +68,8 @@ Email:srestaswrnm@gmail.com
             This function simply returns you some string. The string will be the port your are Currently using.This will print Current Port you are working with.
             </br></br>
             <p style="color:#999">Code:</p>
-            std::string CurrentPort = Ser.getPort(); cout << CurrentPort << endl;
+            std::string CurrentPort = Ser.getPort();<br>
+            cout << CurrentPort << endl;<br>
           </div>
         </div>
 
@@ -78,7 +81,7 @@ Email:srestaswrnm@gmail.com
             This fuction will print the port you are working with on the screen.
             </br></br>
             <p style="color:#999">Code:</p>
-            Ser.printPort();
+            Ser.printPort();<br>
           </div>
         </div>
 
@@ -90,7 +93,7 @@ Email:srestaswrnm@gmail.com
             This funciton resetPort is used to reset the port to another name. It takes two arguments. Where first argument is name of port and the second one in integer. 0 or 1. 1 denotes the verbose on and 0 for verbose off. Simply 0 will not print anything and 1 will print Some informations.
             </br></br>
             <p style="color:#999">Code:</p>
-            Ser.resetPort("/dev/ttyACM0",0); or Ser.resetPort("/dev/ttyACM0",1);
+            Ser.resetPort("/dev/ttyACM0",0);<br> or Ser.resetPort("/dev/ttyACM0",1);<br>
           </div>
         </div>
 
@@ -103,7 +106,7 @@ Email:srestaswrnm@gmail.com
             This function is used to send information over seial port. It takes one parameter. You can send both integer and string variable to this function. It returns 0 or 1 with success or failure of sending the information.
             </br></br>
             <p style="color:#999">Code:</p>
-            Ser.sendBuffer("Hello World"); Ser.sendBuffer(1);
+            Ser.sendBuffer("Hello World");<br> Ser.sendBuffer(1);<br>
           </div>
         </div>
       </div>
@@ -117,7 +120,7 @@ Email:srestaswrnm@gmail.com
             At First Download the files and copy the PHP library to your working directory.Here Arducom is the name of class and Ser is name of Object. COM4 is the name of Serial Port. Incase of linux We Use dev/ttyACM0 or something similar. First see in which serial port arduino is communicating with your computer.
             </br></br>
             <p style="color:#999">Code:</p>
-              require(Arducom.php);
+              require(Arducom.php);<br>
               Ser = new Arducom
             <div>
             </div>
@@ -132,7 +135,7 @@ Email:srestaswrnm@gmail.com
             This function simply returns you some string. The string will be the port your are Currently using.This will print Current Port you are working with.
             </br></br>
             <p style="color:#999">Code:</p>
-             $CurrentPort = Ser->getPort();
+             $CurrentPort = Ser->getPort();<br>
           </div>
         </div>
 
@@ -144,7 +147,7 @@ Email:srestaswrnm@gmail.com
             This fuction will print the port you are working with on the screen.
             </br></br>
             <p style="color:#999">Code:</p>
-            $Ser->printPort();
+            $Ser->printPort();<br>
           </div>
         </div>
 
@@ -156,7 +159,7 @@ Email:srestaswrnm@gmail.com
             This funciton resetPort is used to reset the port to another name. It takes one argument. Where it is name of port .
             </br></br>
             <p style="color:#999">Code:</p>
-            $Ser->resetPort("/dev/ttyACM0");
+            $Ser->resetPort("/dev/ttyACM0");<br>
             </div>
         </div>
 
@@ -169,7 +172,7 @@ Email:srestaswrnm@gmail.com
             This function is used to send information over seial port. It takes one parameter. You can send both integer and string variable to this function. It returns 0 or 1 with success or failure of sending the information.
             </br></br>
             <p style="color:#999">Code:</p>
-            $Ser->sendBuffer("Hello World"); Ser->sendBuffer(1);
+            $Ser->sendBuffer("Hello World");<br> Ser->sendBuffer(1);<br>
           </div>
         </div>
       </div>
