@@ -17,7 +17,7 @@ function repoShow(name,link,info){
   $('#repo_modal').modal("show");
 }
 
-$.get('https://api.github.com/users/bravegurkhas/repos',function(data){
+$.get('https://api.github.com/users/bravegurkha/repos',function(data){
   $.each(data,function(i,j){
     if(j.fork == true){
       forkData =  "<div class='label label-success pull-right'><span class=\"fa fa-code-fork\"></span> Forked</div>";
